@@ -1,0 +1,12 @@
+Component: ARM Compiler 6.14 Tool: armlink [5db06800]
+
+==============================================================================
+
+Section Cross References
+
+    flash.o(.ARM.exidx.text.enable) refers to flash.o(.text.enable) for [Anonymous Symbol]
+    flash.o(.ARM.exidx.text.erase) refers to flash.o(.text.erase) for [Anonymous Symbol]
+    flash.o(.text.write) refers to flash.o(.text.erase) for erase
+    flash.o(.ARM.exidx.text.write) refers to flash.o(.text.write) for [Anonymous Symbol]
+    flash.o(.ARM.exidx.text.read) refers to flash.o(.text.read) for [Anonymous Symbol]
+
