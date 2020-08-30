@@ -17,6 +17,6 @@
 
 void enable(void);
 void write(void *data,unsigned int num_word);
-int erase(unsigned int blockCount);
+void erase(unsigned int blockCount);
 void read(void *data,unsigned int num_word);
 #endif
