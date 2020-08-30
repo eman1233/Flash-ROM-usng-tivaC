@@ -11,7 +11,7 @@
 
 #define WRITE 0x01             //write word
 #define ERASE 0x02             //erase word
-#define WRKEY 0xA442           //indicate to write
+#define WRKEY 0xA442           
 #define PRIS  0x02             //indicate complete erase
 #define KEY   0x10             //enable key
 
