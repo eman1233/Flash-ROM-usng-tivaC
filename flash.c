@@ -6,14 +6,14 @@ void enable(void){
 	
 }
 
-int erase(unsigned int blockCount){
+void erase(unsigned int blockCount){
 	FMA&=0xFFFC0000;
 	for(unsigned int i=0;i<blockCount;i++){
 		FMA|=((uint32_t)FLASH_BASE_ADDRESS)+(i*1024);
-	}
 	FMC|=(WRKEY<<16)|ERASE;
 	while(FMC&ERASE){}
-		return 0;
+       
+	}
 }
 
 void write(void *data,uint32_t num_word){
@@ -23,7 +23,7 @@ void write(void *data,uint32_t num_word){
 		FMD=((volatile unsigned long*)data)[i];
 		FMA&=0xFFFC0000;
 		FMA|=((uint32_t)FLASH_BASE_ADDRESS)+(i*sizeof(uint32_t));
-		FMC|=(WRKEY<<16)|WRITE;
+		FMC|=. (WRKEY<<16)|WRITE;
 		while(FMC&WRITE){}
 	}
 	
