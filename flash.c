@@ -1,9 +1,7 @@
 #include "flash.h"
 #include <stdint.h>
 void enable(void){
-	if(BOOTCFG&KEY)
-		FMC|=WRKEY;
-	
+	BOOTCFG|=KEY;
 }
 
 void erase(unsigned int blockCount){
