@@ -21,7 +21,7 @@ void write(void *data,uint32_t num_word){
 		FMD=((volatile unsigned long*)data)[i];
 		FMA&=0xFFFC0000;
 		FMA|=((uint32_t)FLASH_BASE_ADDRESS)+(i*sizeof(uint32_t));
-		FMC|=. (WRKEY<<16)|WRITE;
+		FMC|=(WRKEY<<16)|WRITE;
 		while(FMC&WRITE){}
 	}
 	
